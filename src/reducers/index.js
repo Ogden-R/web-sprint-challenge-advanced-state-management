@@ -11,7 +11,7 @@ export const initialState = {
         }
     ],
     isLoading: false,
-    error: ""
+    errorText: ""
 }
 
 const reducer = (state= initialState, action)=>{
@@ -31,7 +31,7 @@ const reducer = (state= initialState, action)=>{
             return({
                 ...state,
                 isLoading: false,
-                error: action.payload
+                errorText: action.payload
             });
         case(ADD_SMURF):
             return({

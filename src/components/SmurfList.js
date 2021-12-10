@@ -25,14 +25,14 @@ import Smurf from './Smurf';
     </section>);
     
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         smurfs: state.smurfs,
         isLoading: state.isLoading
     }
 }
 
-export default connect(mapStateToProps)(SmurfList);
+export default connect(mapStateToProps, {fetchSmurfs})(SmurfList);
 
 //Task List:
 //1. Connect the smurfs and loading state values to the SmurfList component.
